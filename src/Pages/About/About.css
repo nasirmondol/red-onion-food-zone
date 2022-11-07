@@ -1,0 +1,10 @@
+.about-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 25px;
+    padding: 5px;
+}
+.about-text{
+    margin: 25px;
+    padding: 5px;
+}
