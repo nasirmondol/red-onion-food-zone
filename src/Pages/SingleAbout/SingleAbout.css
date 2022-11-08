@@ -1,4 +1,10 @@
-.about{
-    padding: 5;
-    margin: 10px;
+.about {
+    padding: 5px;
+    margin: 20px;
+    box-shadow: 5px 5px 10px #888888;
+    border-radius: 6px;
+}
+
+.about:hover {
+    width: 550px;
 }

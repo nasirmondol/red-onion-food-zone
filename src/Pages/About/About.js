@@ -15,8 +15,8 @@ const About = () => {
     }, [])
     return (
         <div >
-            <div className='about-text w-25'>
-                <h2 className='ml-0'>Why you choose us?</h2>
+            <div className='about-text m-15 w-25'>
+                <h2 className=''>Why you choose us?</h2>
                 <p><small>We are very seincerly and serious in our responsibility. We work hard with team.</small></p>
             </div>
             <div className='about-container'>

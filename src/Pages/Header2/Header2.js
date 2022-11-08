@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const Header2 = () => {
     return (
-        <div className='header2'>
+        <div className='header2 text-center'>
             <Link to='/breakfast'>Breakfast</Link>
             <Link to='/lunch'>Lunch</Link>
             <Link to='/dinner'>Dinner</Link>

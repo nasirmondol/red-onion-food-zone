@@ -7,9 +7,12 @@ import Header from './Pages/Shared/Header/Header';
 import Login from './Pages/Login/Login/Login';
 import Register from './Pages/Login/Register/Register';
 import About from './Pages/About/About';
-import Details from './Pages/Details/Details';
 import Lunch from './Pages/Lunch/Lunch';
 import Dinner from './Pages/Dinner/Dinner';
+import Footer from './Pages/Shared/Footer/Footer';
+import BreakfastDetails from './Pages/Details/BreakfastDetails/BreakfastDetails';
+import LunchDetails from './Pages/Details/LunchDetails/LunchDetails';
+import DinnerDetails from './Pages/Details/DinnerDetails/DinnerDetails';
 
 function App() {
   return (
@@ -24,8 +27,11 @@ function App() {
       <Route path='/login' element={<Login/>}></Route>
       <Route path='/register' element={<Register/>}></Route>
       <Route path='/about' element={<About/>}></Route>
-      <Route path='/details' element={<Details></Details>}></Route>
+      <Route path='/breakfast/:breakfastId' element={<BreakfastDetails/>}></Route>
+      <Route path='/lunch/:lunchId' element={<LunchDetails></LunchDetails>}></Route>
+      <Route path='/dinner/:dinnerId' element={<DinnerDetails/>}></Route>
      </Routes>
+     <Footer></Footer>
     </div>
   );
 }
