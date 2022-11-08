@@ -13,25 +13,34 @@ import Footer from './Pages/Shared/Footer/Footer';
 import BreakfastDetails from './Pages/Details/BreakfastDetails/BreakfastDetails';
 import LunchDetails from './Pages/Details/LunchDetails/LunchDetails';
 import DinnerDetails from './Pages/Details/DinnerDetails/DinnerDetails';
+import RequireAuth from './Pages/RquireAuth/RequireAuth';
 
 function App() {
   return (
     <div className='App'>
       <Header></Header>
-     <Routes>
-      <Route path='/' element={<Home></Home>}></Route>
-      <Route path='/home' element={<Home></Home>}></Route>
-      <Route path='/breakfast' element={<Breakfast/>}></Route>
-      <Route path='/lunch' element={<Lunch></Lunch>}></Route>
-      <Route path='/dinner' element={<Dinner></Dinner>}></Route>
-      <Route path='/login' element={<Login/>}></Route>
-      <Route path='/register' element={<Register/>}></Route>
-      <Route path='/about' element={<About/>}></Route>
-      <Route path='/breakfast/:breakfastId' element={<BreakfastDetails/>}></Route>
-      <Route path='/lunch/:lunchId' element={<LunchDetails></LunchDetails>}></Route>
-      <Route path='/dinner/:dinnerId' element={<DinnerDetails/>}></Route>
-     </Routes>
-     <Footer></Footer>
+      <Routes>
+        <Route path='/' element={<Home></Home>}></Route>
+        <Route path='/home' element={<Home></Home>}></Route>
+        <Route path='/breakfast' element={<Breakfast />}></Route>
+        <Route path='/lunch' element={<Lunch></Lunch>}></Route>
+        <Route path='/dinner' element={<Dinner></Dinner>}></Route>
+        <Route path='/login' element={<Login />}></Route>
+        <Route path='/register' element={<Register />}></Route>
+        <Route path='/about' element={
+          <RequireAuth>
+            <About />
+          </RequireAuth>
+        }></Route>
+        <Route path='/breakfast/:breakfastId' element={
+          <RequireAuth>
+            <BreakfastDetails />
+          </RequireAuth>
+        }></Route>
+        <Route path='/lunch/:lunchId' element={<LunchDetails></LunchDetails>}></Route>
+        <Route path='/dinner/:dinnerId' element={<DinnerDetails />}></Route>
+      </Routes>
+      <Footer></Footer>
     </div>
   );
 }
