@@ -13,7 +13,7 @@ const SingleBreakfast = ({ breakfast }) => {
     return (
         <div className='single-container justify-content-center'>
             <img className='mt-2' height={120} src={img} alt="" />
-            <h6 className='text-center mt-2 d-flex justify-content-center ms-5'><small>{name}</small></h6>
+            <h6 className='text-center mt-2 d-flex justify-content-center'><small>{name}</small></h6>
             <p className='text-center mt-0'><small>{description}</small></p>
             <p className='text-center mt-0'><small>Price: ${price}</small></p>
             <Button onClick={() => handleDetails(id)} className='bg-info mb-3'>See details</Button>

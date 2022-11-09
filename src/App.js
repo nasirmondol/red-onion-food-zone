@@ -14,6 +14,7 @@ import BreakfastDetails from './Pages/Details/BreakfastDetails/BreakfastDetails'
 import LunchDetails from './Pages/Details/LunchDetails/LunchDetails';
 import DinnerDetails from './Pages/Details/DinnerDetails/DinnerDetails';
 import RequireAuth from './Pages/RquireAuth/RequireAuth';
+import NotFound from './Pages/NotFound/NotFound';
 
 function App() {
   return (
@@ -39,6 +40,7 @@ function App() {
         }></Route>
         <Route path='/lunch/:lunchId' element={<LunchDetails></LunchDetails>}></Route>
         <Route path='/dinner/:dinnerId' element={<DinnerDetails />}></Route>
+        <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>
     </div>
