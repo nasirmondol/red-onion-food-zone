@@ -3,6 +3,7 @@ import { Button, Form } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import auth from '../../../firebase.init';
 import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
+import SocialLogin from '../Login/SocialLogin/SocialLogin';
 
 const Register = () => {
     const [name, setName] = useState('')
@@ -58,7 +59,9 @@ const Register = () => {
                         Please Login
                     </Link>
                 </p>
+                <SocialLogin/>
             </Form>
+           
         </div>
     );
 };
