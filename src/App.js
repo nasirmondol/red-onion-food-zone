@@ -15,6 +15,9 @@ import LunchDetails from './Pages/Details/LunchDetails/LunchDetails';
 import DinnerDetails from './Pages/Details/DinnerDetails/DinnerDetails';
 import RequireAuth from './Pages/RquireAuth/RequireAuth';
 import NotFound from './Pages/NotFound/NotFound';
+import AddUser from './AddProduct/AddProduct';
+import AddProduct from './AddProduct/AddProduct';
+import ManageProduct from './ManageProduct/ManageProduct';
 
 function App() {
   return (
@@ -33,9 +36,20 @@ function App() {
             <About />
           </RequireAuth>
         }></Route>
+
+        <Route path='/addproduct' element={
+          <RequireAuth>
+            <AddProduct />
+          </RequireAuth>
+        }></Route>
         <Route path='/breakfast/:breakfastId' element={
           <RequireAuth>
             <BreakfastDetails />
+          </RequireAuth>
+        }></Route>
+        <Route path='/manage' element={
+          <RequireAuth>
+            <ManageProduct />
           </RequireAuth>
         }></Route>
         <Route path='/lunch/:lunchId' element={<LunchDetails></LunchDetails>}></Route>

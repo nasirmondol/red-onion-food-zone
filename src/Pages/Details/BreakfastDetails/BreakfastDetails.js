@@ -7,16 +7,14 @@ const BreakfastDetails = () => {
     const [details, setDetails] = useState({})
 
     useEffect(() => {
-        fetch('/breakfast.json')
+        const url = `http://localhost:5000/product/${breakfastId}`
+        fetch(url)
             .then(res => res.json())
-            .then(data => {
-                const detail = data.find(detail => detail.id == breakfastId)
-                setDetails(detail)
-            })
+            .then(data => setDetails(data))
     }, [])
 
     return (
-        <div>
+        <div className=''>
             <img className='mt-2' height={120} src={details.img} alt="" />
             <h2>{details.name}</h2>
             <p>{details.description}</p>

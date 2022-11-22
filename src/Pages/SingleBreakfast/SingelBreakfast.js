@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import './SingleBreakfast.css';
 
 const SingleBreakfast = ({ breakfast }) => {
-    const { name, id, img, description, price } = breakfast;
+    const { name, _id, img, description, price } = breakfast;
     const navigate = useNavigate();
 
     const handleDetails =  id =>{
@@ -16,7 +16,7 @@ const SingleBreakfast = ({ breakfast }) => {
             <h6 className='text-center mt-2 d-flex justify-content-center'><small>{name}</small></h6>
             <p className='text-center mt-0'><small>{description}</small></p>
             <p className='text-center mt-0'><small>Price: ${price}</small></p>
-            <Button onClick={() => handleDetails(id)} className='bg-info mb-3'>See details</Button>
+            <Button onClick={() => handleDetails(_id)} className='bg-info mb-3'>See details</Button>
         </div>
     );
 };

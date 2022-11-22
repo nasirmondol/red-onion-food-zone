@@ -6,7 +6,7 @@ import SingleBreakfast from '../SingleBreakfast/SingelBreakfast';
 const Breakfast = () => {
     const [breakfasts, setBreakfasts] = useState([]);
     useEffect(() => {
-        fetch('breakfast.json')
+        fetch('http://localhost:5000/product')
             .then(res => res.json())
             .then(data => setBreakfasts(data))
     }, [])
@@ -15,7 +15,7 @@ const Breakfast = () => {
             <div className='breakfast-container w-75 mt-5'>
                 {
                     breakfasts.map(breakfast => <SingleBreakfast
-                        key={breakfast.id}
+                        key={breakfast._id}
                         breakfast={breakfast}
                     ></SingleBreakfast>)
                 }
